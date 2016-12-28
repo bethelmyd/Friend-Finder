@@ -1,0 +1,26 @@
+{
+  "name": "friend-finder",
+  "version": "1.0.0",
+  "description": "Friend Finder",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bethelmyd/Friend-Finder.git"
+  },
+  "author": "DGB",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bethelmyd/Friend-Finder/issues"
+  },
+  "homepage": "https://github.com/bethelmyd/Friend-Finder#readme",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0",
+    "path": "^0.12.7"
+  }
+}
