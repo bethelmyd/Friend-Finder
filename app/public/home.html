@@ -17,7 +17,7 @@
       <hr>
       <a href="/survey"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-question-sign"></span> Take a compatibility survey</button></a>
       <hr>
-      <a href="/api/friends/list" class="friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-th-list"></span> List potential friends</button></a>
+      <a href="/api/friends" class="friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-th-list"></span> List potential friends</button></a>
       <hr>
       <!--<a href="/api/friends/find" class = "friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-search"></span> Find a compatible friend</button></a>-->
     </div>
@@ -46,8 +46,9 @@
       e.preventDefault();
       var href = $(this).attr("href");
       console.log(href);
+	    var currentURL = window.location.origin;
 
-        $.get("http://localhost:3000" + href, function(data) {
+        $.get(currentURL + href, function(data) {
           console.log(data);
           if (data) {
             $("#stats").show();
