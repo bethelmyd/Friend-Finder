@@ -4,6 +4,29 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <style>
+            .container{
+                background-color: lightcoral;
+            }
+            h1{
+                text-align:center;
+            }
+            select{
+                width: 60px;
+                text-align: center;
+                background-color: lightpink;
+                border-radius: 10%;
+            }
+            option{
+                text-align: center;
+                width: auto;
+            }
+            #submit{
+                background-color: lightpink;
+                color: navy;
+            }
+        </style>
     </head>
     <body>
         <div class="container">
@@ -12,11 +35,11 @@
         <h1>Friend Finder Survey</h1>
         <h3>For each question select a number from 1 to 5 with 1 being highly disagree and 5 being highly agree.</h3>
         <form action="" method="">
-            <label>Please enter your name. (Required) </label>
-            <input type = "text" id = "name"><br>
-            <label>Please enter a link to an online photo. (Required) </label>
-            <input type = "text" id = "photo" required><br>
-            <label>You enjoy being alone.</label>
+            <h4><label>Please enter your name. (Required) </label></h4>
+            <input type = "text" id = "name" class="form-control"><br>
+            <h4><label>Please enter a link to an online photo. (Required) </label></h4>
+            <input type = "text" id = "photo" class = "form-control" required><br>
+            <label>You enjoy being alone.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -24,7 +47,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You go out frequently.</label>
+            <label>You go out frequently.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -32,7 +55,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You enjoy reading and other intellectual pursuits.</label>
+            <label>You enjoy reading and other intellectual pursuits.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -40,7 +63,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You like doing outdoor activities.</label>
+            <label>You like doing outdoor activities.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -48,7 +71,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You take exercising seriously.</label>
+            <label>You take exercising seriously.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -56,7 +79,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You like all types of food.</label>
+            <label>You like all types of food.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -64,7 +87,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>Your favorite movies are action/adventure movies.</label>
+            <label>Your favorite movies are action/adventure movies.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -72,7 +95,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You like to travel.</label>
+            <label>You like to travel.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -80,7 +103,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You love animals especially dogs.</label>
+            <label>You love animals especially dogs.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
@@ -88,7 +111,7 @@
                 <option>4</option>
                 <option>5</option>
             </select><br>
-            <label>You enjoy all types of music.</label>
+            <label>You enjoy all types of music.</label><br>
             <select class = "questions">
                 <option>1</option>
                 <option>2</option>
