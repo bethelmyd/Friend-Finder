@@ -3,6 +3,8 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
+var htmlRoutes = require('./app/routing/html-routes.js');
+var apiRoutes = require('./app/routing/api-routes.js');
 
 // Sets up the Express App
 // =============================================================
@@ -21,88 +23,14 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use(express.static('public'));
 
-// Star Wars Characters (DATA)
-// =============================================================
-var friends = [{
-  "name": "Yoda",
-"photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-     5,
-     1,
-     4,
-     4,
-     5,
-     1,
-     2,
-     5,
-     4,
-     1
-   ]},
-   {
-     "name": "Luke",
-  "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-     5,
-     1,
-     4,
-     4,
-     5,
-     1,
-     2,
-     5,
-     4,
-     1
-   ]
-  },
- {
-  name: "Obi Wan Kenobi",
-"photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
-  "scores":[
-     5,
-     1,
-     4,
-     4,
-     5,
-     1,
-     2,
-     5,
-     4,
-     1
-   ]
-  }
-  ];
-
 // Routes
 // =============================================================
 
-// Basic route that sends the user first to the AJAX Page
-app.get("/", function(req, res) {
-  res.sendFile(path.join(__dirname, "app/public/home.html"));
-
-  //The following uses the ejs templating ability added to express
-  // res.render('home'); //start at the home.html file
-});
-
-app.get("/survey", function(req, res) {
-  console.log(path.join(__dirname, "app/public/survey.html"));
-  res.sendFile(path.join(__dirname, "app/public/survey.html"));
-});
+app.get('/', htmlRoutes.home);
+app.get('/survey', htmlRoutes.survey);
 
 // Search for Specific Character (or all characters) - provides JSON
-app.get("/api/friends/:whatToDo?", function(req, res) {
-  var chosen = req.params.whatToDo;
-
-  if (chosen) {
-    console.log(chosen);
-    if(chosen == "list")
-    {
-    res.json(friends);
-    }
-    else{
-      res.json(null);
-    }
-  }
-});
+app.get("/api/friends/:whatToDo?", apiRoutes.friends);
 
 // // Create New Characters - takes in JSON input
 // app.post("/api/new", function(req, res) {
