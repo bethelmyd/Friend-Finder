@@ -19,7 +19,7 @@
       <hr>
       <a href="/api/friends/list" class="friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-th-list"></span> List potential friends</button></a>
       <hr>
-      <a href="/api/friends/find" class = "friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-search"></span> Find a compatible friend</button></a>
+      <!--<a href="/api/friends/find" class = "friends"><button type="button" class="btn btn-normal btn-lg"><span class="glyphicon glyphicon-search"></span> Find a compatible friend</button></a>-->
     </div>
     <div class="row">
 
@@ -46,9 +46,7 @@
       e.preventDefault();
       var href = $(this).attr("href");
       console.log(href);
-      // var whatToDo = href.substring(href.lastIndexOf('/')+1);
-      // if(whatToDo !== 'survey')
-      // {
+
         $.get("http://localhost:3000" + href, function(data) {
           console.log(data);
           if (data) {
@@ -66,12 +64,6 @@
             datumDiv.text("There are currently no friends in the database.");
           }
         });
-      // }
-      // else
-      // {
-      //   $.get("http://localhost:3000/" + whatToDo, function(data) {
-      //   });        
-      // }
     });
 
     $("#clearBtn").on("click", function(){

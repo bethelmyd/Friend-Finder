@@ -30,19 +30,8 @@ app.get('/', htmlRoutes.home);
 app.get('/survey', htmlRoutes.survey);
 
 // Search for Specific Character (or all characters) - provides JSON
-app.get("/api/friends/:whatToDo?", apiRoutes.friends);
-
-// // Create New Characters - takes in JSON input
-// app.post("/api/new", function(req, res) {
-//   var newcharacter = req.body;
-//   newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
-
-//   console.log(newcharacter);
-
-//   characters.push(newcharacter);
-
-//   res.json(newcharacter);
-// });
+app.get("/api/friends", apiRoutes.friends);
+app.post("/api/friends", apiRoutes.addFriend);
 
 // Starts the server to begin listening
 // =============================================================
