@@ -26,7 +26,7 @@ app.use(express.static('public'));
 // Routes
 // =============================================================
 
-app.use('/', htmlRoutes.home);
+app.use(htmlRoutes.home);
 app.get('/survey', htmlRoutes.survey);
 
 // Search for Specific Character (or all characters) - provides JSON
