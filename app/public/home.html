@@ -51,6 +51,7 @@
         $.get(currentURL + href, function(data) {
           console.log(data);
           if (data) {
+            $("#stats").text("");
             $("#stats").show();
             for(var i = 0; i < data.length; i++)
             {
